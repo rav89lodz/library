@@ -29,7 +29,7 @@ class BooksController extends Controller
     {
         return request()->validate([
             'title' =>'required|min:3',
-            'author' => 'required|max:40',
+            'author_id' => 'required',
         ]);
     }
 }
