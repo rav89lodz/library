@@ -30,7 +30,7 @@ class BookCheckoutTest extends TestCase
     public function only_signed_in_user_can_checkout_a_book()
     {
         $book = factory(Book::class)->create();
-        $this->post('/checkout/'.$book->id)->assertRedirect('/login');
+        $this->post('/checkout/'.$book->id)->assertRedirect('login');
 
         $this->assertCount(0, Reservation::all());
     }
