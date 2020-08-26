@@ -51,7 +51,7 @@ class BookTest extends TestCase
         ]);
 
         $this->assertEquals('New title', Book::first()->title);
-        $this->assertEquals(12, Book::first()->author_id);
+        $this->assertEquals(22, Book::first()->author_id);
         $response->assertRedirect($book->fresh()->path()); // więc tutaj fresh, żeby odświeżyć Book z nowego response
     }
 
