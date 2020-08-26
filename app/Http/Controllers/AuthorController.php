@@ -7,6 +7,11 @@ use App\Author;
 
 class AuthorController extends Controller
 {
+    public function create()
+    {
+        return view('authors.create');
+    }
+
     public function store()
     {
         Author::create($this->validateRequest());
